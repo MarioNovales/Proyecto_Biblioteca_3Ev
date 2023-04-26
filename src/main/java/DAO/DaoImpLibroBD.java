@@ -1,6 +1,5 @@
 package DAO;
 
-import Aplicacion.IDaoLibro;
 import Aplicacion.Libro;
 
 public class DaoImpLibroBD implements IDaoLibro {
