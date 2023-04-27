@@ -1,6 +1,9 @@
 package Aplicacion;
 
+import DAO.ConectionManager;
 import Inetfaz_Grafica.VentaGestora;
+
+import java.sql.Connection;
 
 public class Main {
 
@@ -9,6 +12,11 @@ public class Main {
             new VentaGestora();
 
         });
+
+        Connection con = ConectionManager.getConexion("biblioteca");
+
+
+        ConectionManager.closeConexion();
     }
 
 }
