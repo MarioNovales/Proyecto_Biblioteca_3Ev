@@ -1,3 +1,7 @@
+/*
+    Clase en la que se establece la conexion con la base de datos. Se ha utilizado el estilo singelton
+ */
+
 package DAO;
 
 import java.io.*;

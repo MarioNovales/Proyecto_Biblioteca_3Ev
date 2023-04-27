@@ -12,11 +12,13 @@ public class Main {
             new VentaGestora();
 
         });
-
+/*
         Connection con = ConectionManager.getConexion("biblioteca");
 
 
         ConectionManager.closeConexion();
+
+ */
     }
 
 }
