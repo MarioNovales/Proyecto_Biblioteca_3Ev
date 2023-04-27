@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="mejorando">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/VentaGestora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/VentaGestora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentaGestora.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +46,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Aplicacion.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Aplicacion.Main" />
       <module name="Proyecto_Biblioteca_3Ev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Aplicacion.*" />
+          <option name="PATTERN" value="Inetfaz_Grafica.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -56,7 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Aplicacion.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -97,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682496843947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mejorando">
+      <created>1682583437684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682583437684</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,6 +1,6 @@
 package Aplicacion;
 
-import java.util.Scanner;
+import Inetfaz_Grafica.VentaGestora;
 
 public class Main {
 
