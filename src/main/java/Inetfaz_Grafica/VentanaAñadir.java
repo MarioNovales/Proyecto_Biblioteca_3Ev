@@ -26,16 +26,16 @@ public class VentanaAñadir extends JFrame {
 
         lbTituloVen.setBounds(60,40,350,30);
 
-        lbIsbn.setBounds(60,190,50,30);
-        tfIsbn.setBounds(100,190,100,30);
-        lbTitulo.setBounds(265,190,50,30);
-        tfTitulo.setBounds(320,190,100,30);
-        lbAutor.setBounds(60,220,50,30);
-        tfAutor.setBounds(100,220,100,30);
-        lbPaginas.setBounds(265,220,50,30);
-        tfPaginas.setBounds(320,220,100,30);
+        lbIsbn.setBounds(60,100,50,30);
+        tfIsbn.setBounds(100,100,100,30);
+        lbTitulo.setBounds(300,100,50,30);
+        tfTitulo.setBounds(360,100,100,30);
+        lbAutor.setBounds(60,160,50,30);
+        tfAutor.setBounds(100,160,100,30);
+        lbPaginas.setBounds(300,160,50,30);
+        tfPaginas.setBounds(360,160,100,30);
 
-        btnAñadir.setBounds(220,300,150,30);
+        btnAñadir.setBounds(205,250,150,30);
 
 
         add(lbTituloVen);

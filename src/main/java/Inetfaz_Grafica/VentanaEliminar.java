@@ -3,30 +3,66 @@ package Inetfaz_Grafica;
 import javax.swing.*;
 
 public class VentanaEliminar extends JFrame {
-    JButton btnAñadir = new JButton("Añadir libro");
-    JButton btnEliminar = new JButton("Borrar un libro");
-    JButton btnBuscar = new JButton("Buscar libro");
-    JButton btnActualizar = new JButton("Actualizar libro");
 
-    JLabel lbTitulo = new JLabel("Eliminar un libro");
+    JTextField tfBuscar = new JTextField();
+    JTextField tfIsbn = new JTextField();
+    JTextField tfTitulo = new JTextField();
+    JTextField tfAutor = new JTextField();
+    JTextField tfPaginas = new JTextField();
+
+    JButton btnEliminar = new JButton("Eliminar libro");
+    JButton btnBuscar = new JButton("Buscar");
+
+    JLabel lbBUscar = new JLabel("Introduce el isbn del libro:");
+    JLabel lbEnunciado = new JLabel("Los parametros del libro que quieres elimnar son los siguientes");
+    JLabel lbTituloVen = new JLabel("Introduzca el isbn para eliminar un libro");
+    JLabel lbIsbn = new JLabel("isbn:");
+    JLabel lbTitulo = new JLabel("Titulo:");
+    JLabel lbAutor = new JLabel("Autor:");
+    JLabel lbPaginas = new JLabel("Paginas:");
     public VentanaEliminar(){
         super("Eliminar un libro");
-        setSize(400,400);
+        setSize(600,400);
         setLayout(null);
         setResizable(false);
 
-        lbTitulo.setBounds(160,50,150,30);
+        lbTituloVen.setBounds(60,40,350,30);
+        lbBUscar.setBounds(60,80,150,30);
 
-        btnAñadir.setBounds(130,100,150,30);
-        btnEliminar.setBounds(130,140,150,30);
-        btnBuscar.setBounds(130,180,150,30);
-        btnActualizar.setBounds(130,220,150,30);
+        tfBuscar.setBounds(60,110,100,30);
+        btnBuscar.setBounds(200,110,80,30);
 
-        add(lbTitulo);
-        add(btnAñadir);
-        add(btnEliminar);
+        lbEnunciado.setBounds(60,150,400,30);
+        lbIsbn.setBounds(60,190,50,30);
+        tfIsbn.setBounds(100,190,100,30);
+        lbTitulo.setBounds(300,190,50,30);
+        tfTitulo.setBounds(360,190,100,30);
+        lbAutor.setBounds(60,220,50,30);
+        tfAutor.setBounds(100,220,100,30);
+        lbPaginas.setBounds(300,220,50,30);
+        tfPaginas.setBounds(360,220,100,30);
+
+        btnEliminar.setBounds(205,300,150,30);
+
+        tfIsbn.setEditable(false);
+        tfAutor.setEditable(false);
+        tfTitulo.setEditable(false);
+        tfPaginas.setEditable(false);
+
+        add(lbTituloVen);
+        add(lbBUscar);
+        add(tfBuscar);
         add(btnBuscar);
-        add(btnActualizar);
+        add(lbEnunciado);
+        add(tfIsbn);
+        add(lbIsbn);
+        add(tfAutor);
+        add(lbAutor);
+        add(tfTitulo);
+        add(lbTitulo);
+        add(tfPaginas);
+        add(lbPaginas);
+        add(btnEliminar);
 
         setVisible(true);
 
