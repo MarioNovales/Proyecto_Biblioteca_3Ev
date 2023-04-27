@@ -12,6 +12,7 @@ public class VentanaBuscar extends JFrame {
         super("Buscar libros");
         setSize(400,400);
         setLayout(null);
+        setResizable(false);
 
         lbTitulo.setBounds(160,50,150,30);
 

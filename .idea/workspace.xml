@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="mejorando">
+    <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="Empezadas las ventanas y terminado conexion">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DAOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DAOException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java" afterDir="false" />
     </list>
@@ -119,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682590812364</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Empezadas las ventanas y terminado conexion">
+      <created>1682591487594</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682591487594</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicio" />
     <MESSAGE value="mejorando" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejorando" />
+    <MESSAGE value="Empezadas las ventanas y terminado conexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Empezadas las ventanas y terminado conexion" />
   </component>
 </project>

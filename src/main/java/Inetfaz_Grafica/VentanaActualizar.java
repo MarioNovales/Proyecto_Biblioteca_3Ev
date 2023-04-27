@@ -13,6 +13,7 @@ public class VentanaActualizar extends JFrame {
         super("Actualizar un libro");
         setSize(400,400);
         setLayout(null);
+        setResizable(false);
 
         lbTitulo.setBounds(160,50,150,30);
 

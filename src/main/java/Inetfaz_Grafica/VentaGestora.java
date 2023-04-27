@@ -16,6 +16,7 @@ public class VentaGestora extends JFrame {
         setSize(400,400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
+        setResizable(false);
 
         lbMenu.setBounds(180,50,50,30);
 

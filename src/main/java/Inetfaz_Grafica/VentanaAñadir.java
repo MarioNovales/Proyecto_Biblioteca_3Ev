@@ -15,6 +15,7 @@ public class VentanaAñadir extends JFrame {
         super("Añadir Libro");
         setSize(400,400);
         setLayout(null);
+        setResizable(false);
 
         lbTitulo.setBounds(160,50,150,30);
 
