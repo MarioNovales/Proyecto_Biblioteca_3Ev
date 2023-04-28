@@ -1,4 +1,4 @@
-package Inetfaz_Grafica;
+package GUI;
 
 import javax.swing.*;
 
@@ -25,6 +25,7 @@ public class VentanaBuscar extends JFrame {
         setSize(600,400);
         setLayout(null);
         setResizable(false);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         lbTituloVen.setBounds(60,40,350,30);
         lbBUscar.setBounds(60,80,150,30);

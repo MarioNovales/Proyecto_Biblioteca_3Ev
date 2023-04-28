@@ -1,9 +1,6 @@
 package Aplicacion;
 
-import DAO.ConectionManager;
-import Inetfaz_Grafica.VentaGestora;
-
-import java.sql.Connection;
+import GUI.VentaGestora;
 
 public class Main {
 

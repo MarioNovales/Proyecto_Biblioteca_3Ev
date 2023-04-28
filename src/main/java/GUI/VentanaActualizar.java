@@ -1,8 +1,8 @@
-package Inetfaz_Grafica;
+package GUI;
 
 import javax.swing.*;
 
-public class VentanaEliminar extends JFrame {
+public class VentanaActualizar extends JFrame {
 
     JTextField tfBuscar = new JTextField();
     JTextField tfIsbn = new JTextField();
@@ -10,44 +10,41 @@ public class VentanaEliminar extends JFrame {
     JTextField tfAutor = new JTextField();
     JTextField tfPaginas = new JTextField();
 
-    JButton btnEliminar = new JButton("Eliminar libro");
+    JButton btnActualizar = new JButton("Actualizar libro");
     JButton btnBuscar = new JButton("Buscar");
 
     JLabel lbBUscar = new JLabel("Introduce el isbn del libro:");
-    JLabel lbEnunciado = new JLabel("Los parametros del libro que quieres elimnar son los siguientes");
-    JLabel lbTituloVen = new JLabel("Introduzca el isbn para eliminar un libro");
+    JLabel lbEnunciado = new JLabel("Introduce los nuevos parametros para el libro");
+    JLabel lbTituloVen = new JLabel("Rellene el siguiente formulario para actualizar el libro");
     JLabel lbIsbn = new JLabel("isbn:");
     JLabel lbTitulo = new JLabel("Titulo:");
     JLabel lbAutor = new JLabel("Autor:");
     JLabel lbPaginas = new JLabel("Paginas:");
-    public VentanaEliminar(){
-        super("Eliminar un libro");
+    public VentanaActualizar(){
+        super("Actualizar un libro");
         setSize(600,400);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(null);
         setResizable(false);
 
-        lbTituloVen.setBounds(60,40,350,30);
-        lbBUscar.setBounds(60,80,150,30);
+        lbTituloVen.setBounds(60,40,400,30);
+        lbBUscar.setBounds(60,80,220,30);
 
         tfBuscar.setBounds(60,110,100,30);
         btnBuscar.setBounds(200,110,80,30);
 
-        lbEnunciado.setBounds(60,150,400,30);
+        lbEnunciado.setBounds(60,150,350,30);
         lbIsbn.setBounds(60,190,50,30);
         tfIsbn.setBounds(100,190,100,30);
         lbTitulo.setBounds(300,190,50,30);
         tfTitulo.setBounds(360,190,100,30);
         lbAutor.setBounds(60,220,50,30);
         tfAutor.setBounds(100,220,100,30);
-        lbPaginas.setBounds(300,220,50,30);
+        lbPaginas.setBounds(300,220,70,30);
         tfPaginas.setBounds(360,220,100,30);
 
-        btnEliminar.setBounds(205,300,150,30);
+        btnActualizar.setBounds(205,300,150,30);
 
-        tfIsbn.setEditable(false);
-        tfAutor.setEditable(false);
-        tfTitulo.setEditable(false);
-        tfPaginas.setEditable(false);
 
         add(lbTituloVen);
         add(lbBUscar);
@@ -62,10 +59,11 @@ public class VentanaEliminar extends JFrame {
         add(lbTitulo);
         add(tfPaginas);
         add(lbPaginas);
-        add(btnEliminar);
+        add(btnActualizar);
 
         setVisible(true);
 
     }
+
 
 }

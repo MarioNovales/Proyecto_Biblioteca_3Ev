@@ -1,4 +1,4 @@
-package Inetfaz_Grafica;
+package GUI;
 
 import javax.swing.*;
 
