@@ -26,20 +26,20 @@ public class VentanaActualizar extends JFrame {
         setLayout(null);
         setResizable(false);
 
-        lbTituloVen.setBounds(60,40,350,30);
-        lbBUscar.setBounds(60,80,150,30);
+        lbTituloVen.setBounds(60,40,400,30);
+        lbBUscar.setBounds(60,80,220,30);
 
         tfBuscar.setBounds(60,110,100,30);
         btnBuscar.setBounds(200,110,80,30);
 
-        lbEnunciado.setBounds(60,150,300,30);
+        lbEnunciado.setBounds(60,150,350,30);
         lbIsbn.setBounds(60,190,50,30);
         tfIsbn.setBounds(100,190,100,30);
         lbTitulo.setBounds(300,190,50,30);
         tfTitulo.setBounds(360,190,100,30);
         lbAutor.setBounds(60,220,50,30);
         tfAutor.setBounds(100,220,100,30);
-        lbPaginas.setBounds(300,220,50,30);
+        lbPaginas.setBounds(300,220,70,30);
         tfPaginas.setBounds(360,220,100,30);
 
         btnActualizar.setBounds(205,300,150,30);
