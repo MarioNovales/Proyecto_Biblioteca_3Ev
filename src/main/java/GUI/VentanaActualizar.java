@@ -1,5 +1,8 @@
 package GUI;
 
+import Aplicacion.Libro;
+import DAO.DaoImpLibroBD;
+
 import javax.swing.*;
 
 public class VentanaActualizar extends JFrame {
@@ -61,8 +64,24 @@ public class VentanaActualizar extends JFrame {
         add(lbPaginas);
         add(btnActualizar);
 
+        tfIsbn.setEditable(false);
+
         setVisible(true);
 
+        btnBuscar.addActionListener(e -> {
+            Libro lb = DaoImpLibroBD.getLibro(tfBuscar.getText());
+
+            tfIsbn.setText(lb.getIsbn());
+            tfAutor.setText(lb.getAutor());
+            tfTitulo.setText(lb.getTitulo());
+            tfPaginas.setText(String.valueOf(lb.getPaginas()));
+        });
+
+        btnActualizar.addActionListener(e -> {
+            DaoImpLibroBD.actualizaLibro(tfIsbn.getText(),tfTitulo.getText(),tfAutor.getText(), Integer.parseInt(tfPaginas.getText()));
+
+            JOptionPane.showMessageDialog(null,"El libro ha sido actualizado correctamente");
+        });
     }
 
 

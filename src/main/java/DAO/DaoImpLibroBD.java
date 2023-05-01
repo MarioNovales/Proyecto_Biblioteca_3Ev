@@ -29,6 +29,20 @@ public class DaoImpLibroBD implements IDaoLibro {
         }
     }
 
+    public static void actualizaLibro(String isbn,String titulo , String autor, int paginas){
+        String consulta = "update libro set titulo = '" + titulo + "', autor = '" + autor + "', paginas = " + paginas + " where isbn = " + isbn;
+
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+            PreparedStatement pstmnt = con.prepareStatement(consulta);
+
+            pstmnt.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static String[] sacaIsbn(){
         String[] array = new String[0];
         String consulta = "SELECT isbn FROM libro;";

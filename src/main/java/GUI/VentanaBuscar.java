@@ -72,11 +72,11 @@ public class VentanaBuscar extends JFrame {
             Libro lb = DaoImpLibroBD.getLibro(tfBuscar.getText());
 
             tfIsbn.setText(lb.getIsbn());
-            System.out.println(lb.getIsbn());
             tfAutor.setText(lb.getAutor());
             tfTitulo.setText(lb.getTitulo());
             tfPaginas.setText(String.valueOf(lb.getPaginas()));
         });
+
     }
 
 }
