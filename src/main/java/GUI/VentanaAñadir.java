@@ -1,5 +1,7 @@
 package GUI;
 
+import DAO.DaoImpLibroBD;
+
 import javax.swing.*;
 
 public class VentanaAñadir extends JFrame {
@@ -53,6 +55,12 @@ public class VentanaAñadir extends JFrame {
 
         setVisible(true);
 
+        btnAñadir.addActionListener(e ->{
+
+            DaoImpLibroBD.guradaLibro(tfIsbn.getText(),tfTitulo.getText(),tfAutor.getText(), Integer.parseInt(tfPaginas.getText()));
+
+            JOptionPane.showMessageDialog(null,"Se ha guardado correctamente");
+        });
     }
 
 }

@@ -1,5 +1,8 @@
 package GUI;
 
+import Aplicacion.Libro;
+import DAO.DaoImpLibroBD;
+
 import javax.swing.*;
 
 public class VentanaBuscar extends JFrame {
@@ -65,7 +68,15 @@ public class VentanaBuscar extends JFrame {
 
         setVisible(true);
 
+        btnBuscar.addActionListener(e ->{
+            Libro lb = DaoImpLibroBD.getLibro(tfBuscar.getText());
 
+            tfIsbn.setText(lb.getIsbn());
+            System.out.println(lb.getIsbn());
+            tfAutor.setText(lb.getAutor());
+            tfTitulo.setText(lb.getTitulo());
+            tfPaginas.setText(String.valueOf(lb.getPaginas()));
+        });
     }
 
 }

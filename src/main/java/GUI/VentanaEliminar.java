@@ -1,10 +1,13 @@
 package GUI;
 
+import DAO.DaoImpLibroBD;
+
 import javax.swing.*;
 
 public class VentanaEliminar extends JFrame {
 
-    JTextField tfBuscar = new JTextField();
+    JComboBox<String> cbBuscar = new JComboBox<>();
+
     JTextField tfIsbn = new JTextField();
     JTextField tfTitulo = new JTextField();
     JTextField tfAutor = new JTextField();
@@ -30,8 +33,8 @@ public class VentanaEliminar extends JFrame {
         lbTituloVen.setBounds(60,40,350,30);
         lbBUscar.setBounds(60,80,150,30);
 
-        tfBuscar.setBounds(60,110,100,30);
-        btnBuscar.setBounds(200,110,80,30);
+        cbBuscar.setBounds(60,110,150,30);
+        btnBuscar.setBounds(250,110,80,30);
 
         lbEnunciado.setBounds(60,150,400,30);
         lbIsbn.setBounds(60,190,50,30);
@@ -52,7 +55,7 @@ public class VentanaEliminar extends JFrame {
 
         add(lbTituloVen);
         add(lbBUscar);
-        add(tfBuscar);
+        add(cbBuscar);
         add(btnBuscar);
         add(lbEnunciado);
         add(tfIsbn);
@@ -66,6 +69,13 @@ public class VentanaEliminar extends JFrame {
         add(btnEliminar);
 
         setVisible(true);
+
+        cbBuscar.addActionListener(e ->{
+
+            for(int i = 0; i < DaoImpLibroBD.sacaIsbn().length;i++){
+                cbBuscar.addItem(String.valueOf(DaoImpLibroBD.sacaIsbn()[i]));
+            }
+        });
 
     }
 

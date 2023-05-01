@@ -1,5 +1,6 @@
 package Aplicacion;
 
+import DAO.ConectionManager;
 import GUI.VentaGestora;
 
 public class Main {
@@ -9,13 +10,8 @@ public class Main {
             new VentaGestora();
 
         });
-/*
-        Connection con = ConectionManager.getConexion("biblioteca");
 
 
-        ConectionManager.closeConexion();
-
- */
     }
 
 }
