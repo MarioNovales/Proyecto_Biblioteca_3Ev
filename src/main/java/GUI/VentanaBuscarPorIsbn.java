@@ -5,7 +5,7 @@ import DAO.DaoImpLibroBD;
 
 import javax.swing.*;
 
-public class VentanaBuscar extends JFrame {
+public class VentanaBuscarPorIsbn extends JFrame {
 
 
     JTextField tfBuscar = new JTextField();
@@ -23,7 +23,7 @@ public class VentanaBuscar extends JFrame {
     JLabel lbTitulo = new JLabel("Titulo:");
     JLabel lbAutor = new JLabel("Autor:");
     JLabel lbPaginas = new JLabel("Paginas:");
-    public VentanaBuscar(){
+    public VentanaBuscarPorIsbn(){
         super("Buscar libros");
         setSize(600,400);
         setLayout(null);

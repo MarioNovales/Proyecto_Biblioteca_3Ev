@@ -6,7 +6,8 @@ public class VentaGestora extends JFrame {
 
     JButton btnAñadir = new JButton("Añadir libro");
     JButton btnEliminar = new JButton("Borrar un libro");
-    JButton btnBuscar = new JButton("Buscar libro");
+    JButton btnBuscarIsbn = new JButton("Buscar libro por ISBN");
+    JButton btnBuscarTitulo = new JButton("Buscar libro por titulo");
     JButton btnActualizar = new JButton("Actualizar libro");
 
     JLabel lbMenu = new JLabel("Menu:");
@@ -20,15 +21,18 @@ public class VentaGestora extends JFrame {
 
         lbMenu.setBounds(180,50,50,30);
 
-        btnAñadir.setBounds(130,100,150,30);
-        btnEliminar.setBounds(130,140,150,30);
-        btnBuscar.setBounds(130,180,150,30);
-        btnActualizar.setBounds(130,220,150,30);
+        btnAñadir.setBounds(110,100,180,30);
+        btnEliminar.setBounds(110,140,180,30);
+        btnBuscarIsbn.setBounds(110,180,180,30);
+        btnBuscarIsbn.setBounds(110,180,180,30);
+        btnBuscarTitulo.setBounds(110,220,180,30);
+        btnActualizar.setBounds(110,260,180,30);
 
         add(lbMenu);
         add(btnAñadir);
         add(btnEliminar);
-        add(btnBuscar);
+        add(btnBuscarIsbn);
+        add(btnBuscarTitulo);
         add(btnActualizar);
 
         setVisible(true);
@@ -52,9 +56,15 @@ public class VentaGestora extends JFrame {
             });
         });
 
-        btnBuscar.addActionListener(e ->{
+        btnBuscarIsbn.addActionListener(e ->{
             javax.swing.SwingUtilities.invokeLater(() ->{
-                new VentanaBuscar();
+                new VentanaBuscarPorIsbn();
+            });
+        });
+
+        btnBuscarTitulo.addActionListener(e ->{
+            javax.swing.SwingUtilities.invokeLater(() ->{
+                new VentanaBuscarPorTitulo();
             });
         });
 
