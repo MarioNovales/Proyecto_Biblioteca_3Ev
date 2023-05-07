@@ -69,7 +69,7 @@ public class VentanaBuscarPorIsbn extends JFrame {
         setVisible(true);
 
         btnBuscar.addActionListener(e ->{
-            Libro lb = DaoImpLibroBD.getLibro(tfBuscar.getText());
+            Libro lb = DaoImpLibroBD.getLibroISBN(tfBuscar.getText());
 
             tfIsbn.setText(lb.getIsbn());
             tfAutor.setText(lb.getAutor());

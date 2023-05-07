@@ -78,7 +78,7 @@ public class DaoImpLibroBD implements IDaoLibro {
         return array;
     }
 
-    public static Libro getLibro(String isbn){
+    public static Libro getLibroISBN(String isbn){
 
         String titulo = null, autor = null;
         int paginas = 0;
@@ -98,6 +98,39 @@ public class DaoImpLibroBD implements IDaoLibro {
 
             return new Libro(isbn,titulo,autor,paginas);
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public static ArrayList<Libro> getLibroTitulo(String titulo){
+
+        ArrayList<Libro> ArrayLibro = new ArrayList<>();
+
+        String tituloLb, autor,  isbn;
+        int paginas = 0;
+
+
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+            PreparedStatement pstmnt = con.prepareStatement("SELECT * FROM libro where titulo like('%" + titulo +"%')");
+
+            ResultSet rs = pstmnt.executeQuery();
+
+
+
+            while (rs.next()){
+                isbn = rs.getString(1);
+                tituloLb = rs.getString(2);
+                autor = rs.getString(3);
+                paginas = rs.getInt(4);
+
+                ArrayLibro.add(new Libro(isbn,tituloLb,autor,paginas));
+            }
+
+            return  ArrayLibro;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
