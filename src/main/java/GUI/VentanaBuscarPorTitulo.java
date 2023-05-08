@@ -28,11 +28,9 @@ public class VentanaBuscarPorTitulo extends JFrame {
         lbBUscar.setBounds(60,50,190,30);
 
         tfBuscar.setBounds(60,80,100,30);
+        tbResultado.setBounds(20,120,560,240);
 
         btnBuscar.setBounds(200,80,150,30);
-
-
-
 
         btnBuscar.addActionListener(e ->{
             Object columnas[] = {"ISBN","TITULO","AUTOR","PAGINAS"};
