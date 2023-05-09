@@ -32,11 +32,12 @@ public class VentanaBuscarPorTitulo extends JFrame {
 
         btnBuscar.setBounds(200,80,150,30);
 
+        Object columnas[] = {"ISBN","TITULO","AUTOR","PAGINAS"};
+        DefaultTableModel modelo = new DefaultTableModel(columnas,0);
+        tbResultado = new JTable(modelo);
+        Object[] ob = new Object[4];
+
         btnBuscar.addActionListener(e ->{
-            Object columnas[] = {"ISBN","TITULO","AUTOR","PAGINAS"};
-            DefaultTableModel modelo = new DefaultTableModel(columnas,0);
-            tbResultado = new JTable(modelo);
-            Object[] ob = new Object[4];
 
             for (int i = 0; i < DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).size(); i++){
                 ob[0] = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).get(i).getIsbn();
@@ -45,14 +46,13 @@ public class VentanaBuscarPorTitulo extends JFrame {
                 ob[3] = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).get(i).getPaginas();
                 modelo.addRow(ob);
             }
-
-            tbResultado.setModel(modelo);
-            JScrollPane scroll1;
-
-            scroll1 = new JScrollPane(tbResultado);
-            add(scroll1);
         });
 
+        tbResultado.setModel(modelo);
+        JScrollPane scroll1;
+
+        scroll1 = new JScrollPane(tbResultado);
+        add(scroll1);
         add(lbTituloVen);
         add(lbBUscar);
         add(tfBuscar);

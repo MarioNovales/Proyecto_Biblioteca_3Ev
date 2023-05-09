@@ -1,0 +1,221 @@
+Index: src/main/java/GUI/VentanaEliminar.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\n\nimport javax.swing.*;\n\npublic class VentanaEliminar extends JFrame {\n\n    JTextField tfBuscar = new JTextField();\n    JTextField tfIsbn = new JTextField();\n    JTextField tfTitulo = new JTextField();\n    JTextField tfAutor = new JTextField();\n    JTextField tfPaginas = new JTextField();\n\n    JButton btnEliminar = new JButton(\"Eliminar libro\");\n    JButton btnBuscar = new JButton(\"Buscar\");\n\n    JLabel lbBUscar = new JLabel(\"Introduce el isbn del libro:\");\n    JLabel lbEnunciado = new JLabel(\"Los parametros del libro que quieres elimnar son los siguientes\");\n    JLabel lbTituloVen = new JLabel(\"Introduzca el isbn para eliminar un libro\");\n    JLabel lbIsbn = new JLabel(\"isbn:\");\n    JLabel lbTitulo = new JLabel(\"Titulo:\");\n    JLabel lbAutor = new JLabel(\"Autor:\");\n    JLabel lbPaginas = new JLabel(\"Paginas:\");\n    public VentanaEliminar(){\n        super(\"Eliminar un libro\");\n        setSize(600,400);\n        setLayout(null);\n        setResizable(false);\n        setDefaultCloseOperation(DISPOSE_ON_CLOSE);\n\n        lbTituloVen.setBounds(60,40,350,30);\n        lbBUscar.setBounds(60,80,150,30);\n\n        tfBuscar.setBounds(60,110,100,30);\n        btnBuscar.setBounds(200,110,80,30);\n\n        lbEnunciado.setBounds(60,150,400,30);\n        lbIsbn.setBounds(60,190,50,30);\n        tfIsbn.setBounds(100,190,100,30);\n        lbTitulo.setBounds(300,190,50,30);\n        tfTitulo.setBounds(360,190,100,30);\n        lbAutor.setBounds(60,220,50,30);\n        tfAutor.setBounds(100,220,100,30);\n        lbPaginas.setBounds(300,220,50,30);\n        tfPaginas.setBounds(360,220,100,30);\n\n        btnEliminar.setBounds(205,300,150,30);\n\n        tfIsbn.setEditable(false);\n        tfAutor.setEditable(false);\n        tfTitulo.setEditable(false);\n        tfPaginas.setEditable(false);\n\n        add(lbTituloVen);\n        add(lbBUscar);\n        add(tfBuscar);\n        add(btnBuscar);\n        add(lbEnunciado);\n        add(tfIsbn);\n        add(lbIsbn);\n        add(tfAutor);\n        add(lbAutor);\n        add(tfTitulo);\n        add(lbTitulo);\n        add(tfPaginas);\n        add(lbPaginas);\n        add(btnEliminar);\n\n        setVisible(true);\n\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/GUI/VentanaEliminar.java b/src/main/java/GUI/VentanaEliminar.java
+--- a/src/main/java/GUI/VentanaEliminar.java	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
++++ b/src/main/java/GUI/VentanaEliminar.java	(date 1683614301232)
+@@ -50,6 +50,8 @@
+         tfTitulo.setEditable(false);
+         tfPaginas.setEditable(false);
+ 
++
++
+         add(lbTituloVen);
+         add(lbBUscar);
+         add(tfBuscar);
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52_[Changes]/shelved.patch	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
++++ /dev/null	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
+@@ -1,62 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b1c9d539-1a18-48d3-8970-cd9fe6e798f3\" name=\"Changes\" comment=\"Empezadas las ventanas y terminado conexion\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Aplicacion/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Aplicacion/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/DAO/DAOException.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/DAO/DAOException.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2OxGRFZXbW0Ih7p9eFD9wGblTQF\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"last_opened_file_path\": \"/home/estudiante/IdeaProjects/Unidad_9\"\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"Aplicacion.Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Aplicacion.Main\" />\n      <module name=\"Proyecto_Biblioteca_3Ev\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"Inetfaz_Grafica.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Aplicacion.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b1c9d539-1a18-48d3-8970-cd9fe6e798f3\" name=\"Changes\" comment=\"\" />\n      <created>1682494811118</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1682494811118</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"inicio\">\n      <created>1682494879308</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682494879308</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"mejorando\">\n      <created>1682495666077</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682495666077</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"mejorando\">\n      <created>1682495941651</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682495941651</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"mejorando\">\n      <created>1682496843947</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682496843947</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"mejorando\">\n      <created>1682583437684</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682583437684</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"mejorando\">\n      <created>1682590527693</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682590527693</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"mejorando\">\n      <created>1682590812364</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682590812364</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Empezadas las ventanas y terminado conexion\">\n      <created>1682591487594</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682591487594</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"9\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"inicio\" />\n    <MESSAGE value=\"mejorando\" />\n    <MESSAGE value=\"Empezadas las ventanas y terminado conexion\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Empezadas las ventanas y terminado conexion\" />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 13d6b696e91b8f741acfba29898975bcede47020)
+-+++ b/.idea/workspace.xml	(date 1682597031267)
+-@@ -6,15 +6,6 @@
+-   <component name="ChangeListManager">
+-     <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="Empezadas las ventanas y terminado conexion">
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectionManager.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DAOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DAOException.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaActualizar.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaAñadir.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaBuscar.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inetfaz_Grafica/VentanaEliminar.java" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -41,13 +32,13 @@
+-     <option name="hideEmptyMiddlePackages" value="true" />
+-     <option name="showLibraryContents" value="true" />
+-   </component>
+--  <component name="PropertiesComponent"><![CDATA[{
+--  "keyToString": {
+--    "RunOnceActivity.OpenProjectViewOnStart": "true",
+--    "RunOnceActivity.ShowReadmeOnStart": "true",
+--    "last_opened_file_path": "/home/estudiante/IdeaProjects/Unidad_9"
+-+  <component name="PropertiesComponent">{
+-+  &quot;keyToString&quot;: {
+-+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-+    &quot;last_opened_file_path&quot;: &quot;/home/estudiante/IdeaProjects/Unidad_9&quot;
+-   }
+--}]]></component>
+-+}</component>
+-   <component name="RunManager">
+-     <configuration name="Aplicacion.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-       <option name="MAIN_CLASS_NAME" value="Aplicacion.Main" />
+-@@ -133,7 +124,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1682591487594</updated>
+-     </task>
+--    <option name="localTasksCounter" value="9" />
+-+    <task id="LOCAL-00009" summary="Empezadas las ventanas y terminado conexion">
+-+      <created>1682591726006</created>
+-+      <option name="number" value="00009" />
+-+      <option name="presentableId" value="LOCAL-00009" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1682591726006</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="10" />
+-     <servers />
+-   </component>
+-   <component name="Vcs.Log.Tabs.Properties">
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58_[Changes]/shelved.patch	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
++++ /dev/null	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
+@@ -1,56 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b1c9d539-1a18-48d3-8970-cd9fe6e798f3\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OxGRFZXbW0Ih7p9eFD9wGblTQF\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b1c9d539-1a18-48d3-8970-cd9fe6e798f3\" name=\"Changes\" comment=\"\" />\r\n      <created>1682494811118</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1682494811118</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision f183f89889bb41fad5b5696a021bb0baaac99c74)
+-+++ b/.idea/workspace.xml	(date 1682527989063)
+-@@ -4,7 +4,9 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="" />
+-+    <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="">
+-+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-+    </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -19,12 +21,12 @@
+-     <option name="hideEmptyMiddlePackages" value="true" />
+-     <option name="showLibraryContents" value="true" />
+-   </component>
+--  <component name="PropertiesComponent"><![CDATA[{
+--  "keyToString": {
+--    "RunOnceActivity.OpenProjectViewOnStart": "true",
+--    "RunOnceActivity.ShowReadmeOnStart": "true"
+-+  <component name="PropertiesComponent">{
+-+  &quot;keyToString&quot;: {
+-+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+-   }
+--}]]></component>
+-+}</component>
+-   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+-@@ -36,4 +38,15 @@
+-     </task>
+-     <servers />
+-   </component>
+-+  <component name="Vcs.Log.Tabs.Properties">
+-+    <option name="TAB_STATES">
+-+      <map>
+-+        <entry key="MAIN">
+-+          <value>
+-+            <State />
+-+          </value>
+-+        </entry>
+-+      </map>
+-+    </option>
+-+  </component>
+- </project>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58__Changes_.xml	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
++++ /dev/null	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_27_04_2023_16_58_[Changes]" date="1682607528721" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_16_58_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 27/04/2023 16:58 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52__Changes_.xml	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
++++ /dev/null	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_28_4_23_9_52_[Changes]" date="1682668367229" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_4_23_9_52_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 28/4/23 9:52 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b1c9d539-1a18-48d3-8970-cd9fe6e798f3\" name=\"Changes\" comment=\"Empezadas las ventanas y terminado conexion\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2OxGRFZXbW0Ih7p9eFD9wGblTQF\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/estudiante/IdeaProjects/Unidad_9&quot;\n  }\n}</component>\n  <component name=\"RunManager\">\n    <configuration name=\"Aplicacion.Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Aplicacion.Main\" />\n      <module name=\"Proyecto_Biblioteca_3Ev\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"Inetfaz_Grafica.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Aplicacion.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b1c9d539-1a18-48d3-8970-cd9fe6e798f3\" name=\"Changes\" comment=\"\" />\n      <created>1682494811118</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1682494811118</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"inicio\">\n      <created>1682494879308</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682494879308</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"mejorando\">\n      <created>1682495666077</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682495666077</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"mejorando\">\n      <created>1682495941651</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682495941651</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"mejorando\">\n      <created>1682496843947</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682496843947</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"mejorando\">\n      <created>1682583437684</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682583437684</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"mejorando\">\n      <created>1682590527693</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682590527693</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"mejorando\">\n      <created>1682590812364</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682590812364</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Empezadas las ventanas y terminado conexion\">\n      <created>1682591487594</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682591487594</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Empezadas las ventanas y terminado conexion\">\n      <created>1682668571440</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682668571440</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"10\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"inicio\" />\n    <MESSAGE value=\"mejorando\" />\n    <MESSAGE value=\"Empezadas las ventanas y terminado conexion\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Empezadas las ventanas y terminado conexion\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 25e5271a1ae911efba1560e91b3724c9d9a40fff)
++++ b/.idea/workspace.xml	(date 1682670428796)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="Empezadas las ventanas y terminado conexion" />
++    <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="Empezadas las ventanas y terminado conexion">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -43,7 +45,7 @@
+       <module name="Proyecto_Biblioteca_3Ev" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="Inetfaz_Grafica.*" />
++          <option name="PATTERN" value="GUI.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -129,7 +131,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1682668571440</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="Empezadas las ventanas y terminado conexion">
++      <created>1682670342807</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1682670342808</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">

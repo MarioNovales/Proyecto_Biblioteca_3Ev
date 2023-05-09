@@ -1,17 +1,19 @@
 package GUI;
 
+import Aplicacion.Libro;
 import DAO.DaoImpLibroBD;
 
 import javax.swing.*;
 
 public class VentanaEliminar extends JFrame {
 
-    JComboBox<String> cbBuscar = new JComboBox<>();
+
 
     JTextField tfIsbn = new JTextField();
     JTextField tfTitulo = new JTextField();
     JTextField tfAutor = new JTextField();
     JTextField tfPaginas = new JTextField();
+    JTextField tfBorrar = new JTextField();
 
     JButton btnEliminar = new JButton("Eliminar libro");
     JButton btnBuscar = new JButton("Buscar");
@@ -33,7 +35,7 @@ public class VentanaEliminar extends JFrame {
         lbTituloVen.setBounds(60,40,350,30);
         lbBUscar.setBounds(60,80,150,30);
 
-        cbBuscar.setBounds(60,110,150,30);
+        tfBorrar.setBounds(60,110,150,30);
         btnBuscar.setBounds(250,110,80,30);
 
         lbEnunciado.setBounds(60,150,400,30);
@@ -55,7 +57,7 @@ public class VentanaEliminar extends JFrame {
 
         add(lbTituloVen);
         add(lbBUscar);
-        add(cbBuscar);
+        add(tfBorrar);
         add(btnBuscar);
         add(lbEnunciado);
         add(tfIsbn);
@@ -70,11 +72,26 @@ public class VentanaEliminar extends JFrame {
 
         setVisible(true);
 
-        cbBuscar.addActionListener(e ->{
 
-            for(int i = 0; i < DaoImpLibroBD.sacaIsbn().length;i++){
-                cbBuscar.addItem(String.valueOf(DaoImpLibroBD.sacaIsbn()[i]));
-            }
+        btnBuscar.addActionListener(e ->{
+            Libro lb = DaoImpLibroBD.getLibroISBN(tfBorrar.getText());
+
+            tfAutor.setText(lb.getAutor());
+            tfIsbn.setText(lb.getIsbn());
+            tfTitulo.setText(lb.getTitulo());
+            tfPaginas.setText(String.valueOf(lb.getPaginas()));
+        });
+
+
+        btnEliminar.addActionListener(e ->{
+
+            DaoImpLibroBD.eliminaLibro(tfBorrar.getText());
+            JOptionPane.showMessageDialog(null,"Se ha eliminado correctamete el libro");
+            tfBorrar.setText("");
+            tfAutor.setText("");
+            tfIsbn.setText("");
+            tfTitulo.setText("");
+            tfPaginas.setText("");
         });
 
     }

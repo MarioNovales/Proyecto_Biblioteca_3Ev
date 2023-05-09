@@ -90,6 +90,8 @@ public class DaoImpLibroBD implements IDaoLibro {
 
             ResultSet rs = stmnt.executeQuery();
 
+
+
             while (rs.next()){
                 titulo = rs.getString(2);
                 autor = rs.getString(3);
@@ -136,6 +138,22 @@ public class DaoImpLibroBD implements IDaoLibro {
         }
 
 
+    }
+
+
+    public static void eliminaLibro(String isbn){
+
+
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+            PreparedStatement pstmnt = con.prepareStatement("DELETE from libro where isbn = ?");
+            pstmnt.setString(1,isbn);
+
+            pstmnt.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
