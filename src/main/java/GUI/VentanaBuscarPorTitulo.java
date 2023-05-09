@@ -57,7 +57,10 @@ public class VentanaBuscarPorTitulo extends JFrame {
             JScrollPane jsp = new JScrollPane(tbResultado);
             tbResultado.setEnabled(false);
             add(jsp);
-            add(tbResultado);
+
+
+            setBounds(0,0,400,400);
+            repaint();
         });
 
 
