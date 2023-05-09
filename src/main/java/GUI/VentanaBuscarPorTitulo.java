@@ -59,8 +59,9 @@ public class VentanaBuscarPorTitulo extends JFrame {
             add(jsp);
 
 
-            setBounds(0,0,400,400);
+            jsp.setBounds(60,120,480,230);
             repaint();
+            btnBuscar.setEnabled(false);
         });
 
 
