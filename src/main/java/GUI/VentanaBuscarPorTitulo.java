@@ -6,6 +6,8 @@ import DAO.DaoImpLibroBD;
 import javax.swing.*;
 import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.util.ArrayList;
 
 public class VentanaBuscarPorTitulo extends JFrame {
 
@@ -14,8 +16,6 @@ public class VentanaBuscarPorTitulo extends JFrame {
 
     JLabel lbBUscar = new JLabel("Introduce el tiutlo o parte de este:");
     JLabel lbTituloVen = new JLabel("Rellene el formulario para buscar un libro");
-
-    JTable tbResultado = new JTable();
 
     public VentanaBuscarPorTitulo(){
         super("Buscar libros");
@@ -28,35 +28,42 @@ public class VentanaBuscarPorTitulo extends JFrame {
         lbBUscar.setBounds(60,50,190,30);
 
         tfBuscar.setBounds(60,80,100,30);
-        tbResultado.setBounds(20,120,560,240);
 
         btnBuscar.setBounds(200,80,150,30);
 
-        Object columnas[] = {"ISBN","TITULO","AUTOR","PAGINAS"};
-        DefaultTableModel modelo = new DefaultTableModel(columnas,0);
-        tbResultado = new JTable(modelo);
-        Object[] ob = new Object[4];
 
         btnBuscar.addActionListener(e ->{
+            JTable tbResultado;
 
-            for (int i = 0; i < DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).size(); i++){
-                ob[0] = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).get(i).getIsbn();
-                ob[1] = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).get(i).getTitulo();
-                ob[2] = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).get(i).getAutor();
-                ob[3] = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText()).get(i).getPaginas();
-                modelo.addRow(ob);
+            ArrayList<Libro> listaLibros = DaoImpLibroBD.getLibroTitulo(tfBuscar.getText());
+
+            String[] datos = new String[4];
+            DefaultTableModel modelo = new DefaultTableModel();
+
+            modelo.addColumn("ISBN");
+            modelo.addColumn("Titulo");
+            modelo.addColumn("Autor");
+            modelo.addColumn("Paginas");
+
+            for (Libro lb: listaLibros){
+                datos[0] = lb.getIsbn();
+                datos[1] = lb.getTitulo();
+                datos[2] = lb.getAutor();
+                datos[3] = String.valueOf(lb.getPaginas());
+                modelo.addRow(datos);
             }
+
+            tbResultado = new JTable(modelo);
+            JScrollPane jsp = new JScrollPane(tbResultado);
+            tbResultado.setEnabled(false);
+            add(jsp);
+            add(tbResultado);
         });
 
-        tbResultado.setModel(modelo);
-        JScrollPane scroll1;
 
-        scroll1 = new JScrollPane(tbResultado);
-        add(scroll1);
         add(lbTituloVen);
         add(lbBUscar);
         add(tfBuscar);
-        add(tbResultado);
         add(btnBuscar);
 
         setVisible(true);
