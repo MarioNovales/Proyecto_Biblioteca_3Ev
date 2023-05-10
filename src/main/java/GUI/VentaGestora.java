@@ -92,7 +92,7 @@ public class VentaGestora extends JFrame {
         });
 
         btnXML.addActionListener(e ->{
-            new Escritura().escrituraXml();
+            Escritura.escrituraXml();
         });
     }
 }

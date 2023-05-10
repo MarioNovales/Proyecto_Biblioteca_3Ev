@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class Escritura {
 
-    public void escrituraXml(){
+    public static void escrituraXml(){
 
         ArrayList<Libro> libros;
 
