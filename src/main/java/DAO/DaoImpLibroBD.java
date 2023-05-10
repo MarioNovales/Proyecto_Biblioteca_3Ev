@@ -16,7 +16,9 @@ public class DaoImpLibroBD implements IDaoLibro {
 
     public static void guradaLibro(String isbn,String titulo , String autor, int paginas){
 
-        String consulta = "INSERT INTO libro VALUES ('" + isbn +"','" + titulo + "','" + autor + "'," + paginas +")";
+        boolean prestado = false;
+
+        String consulta = "INSERT INTO libro VALUES ('" + isbn +"','" + titulo + "','" + autor + "'," + paginas + "," + prestado + ")";
 
         try {
             Connection con = ConectionManager.getConexion("biblioteca");
@@ -43,45 +45,38 @@ public class DaoImpLibroBD implements IDaoLibro {
         }
     }
 
-    public static String[] sacaIsbn(){
-        String[] array = new String[0];
-        String consulta = "SELECT isbn FROM libro;";
-        String consulta1 = "SELECT count(isbn) as 'cantidad' FROM libro;";
+    public static void PrestaLibros(String isbn){
 
-        try(Connection con = ConectionManager.getConexion("biblioteca")) {
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+            PreparedStatement pstmnt = con.prepareStatement("Update libro set prestado = true where isbn =?");
+            pstmnt.setString(1,isbn);
 
-            try(Statement stmnt = con.createStatement()) {
-                ResultSet rs = stmnt.executeQuery(consulta1);
-
-                array = new String[rs.getInt("cantidad")];
-
-                rs.close();
-                ResultSet rs1 = stmnt.executeQuery(consulta);
-
-                for (int i = 0; i < array.length;i++){
-                    String isbn = rs1.getString("isbn");
-                    array[i] = isbn;
-                    System.out.println(isbn);
-                    System.out.println("hola");
-                }
-
-                rs1.close();
-
-            } catch (SQLException e){
-                e.printStackTrace();
-            }
+            pstmnt.executeUpdate();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
 
-        return array;
+    public static void DevolverLibro(String isbn){
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+            PreparedStatement pstmnt = con.prepareStatement("Update libro set prestado = false where isbn =?");
+            pstmnt.setString(1,isbn);
+
+            pstmnt.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Libro getLibroISBN(String isbn){
 
         String titulo = null, autor = null;
         int paginas = 0;
+        boolean prestado = false;
 
         try {
             Connection connectionBD = ConectionManager.getConexion("biblioteca");
@@ -91,14 +86,14 @@ public class DaoImpLibroBD implements IDaoLibro {
             ResultSet rs = stmnt.executeQuery();
 
 
-
             while (rs.next()){
                 titulo = rs.getString(2);
                 autor = rs.getString(3);
                 paginas = rs.getInt(4);
+                prestado = rs.getBoolean(5);
             }
 
-            return new Libro(isbn,titulo,autor,paginas);
+            return new Libro(isbn,titulo,autor,paginas,prestado);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -113,6 +108,7 @@ public class DaoImpLibroBD implements IDaoLibro {
 
         String tituloLb, autor,  isbn;
         int paginas = 0;
+        boolean prestado = false;
 
 
         try {
@@ -128,8 +124,9 @@ public class DaoImpLibroBD implements IDaoLibro {
                 tituloLb = rs.getString(2);
                 autor = rs.getString(3);
                 paginas = rs.getInt(4);
+                prestado = rs.getBoolean(5);
 
-                ArrayLibro.add(new Libro(isbn,tituloLb,autor,paginas));
+                ArrayLibro.add(new Libro(isbn,tituloLb,autor,paginas,prestado));
             }
 
             return  ArrayLibro;

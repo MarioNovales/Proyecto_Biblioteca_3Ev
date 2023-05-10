@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="Empezadas las ventanas y terminado conexion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaDevolverLibro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaPrestarLibro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentaGestora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentaGestora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTitulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTitulo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

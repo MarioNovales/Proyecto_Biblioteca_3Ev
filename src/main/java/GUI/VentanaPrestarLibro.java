@@ -4,33 +4,34 @@ import Aplicacion.Libro;
 import DAO.DaoImpLibroBD;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.util.ArrayList;
 
-public class VentanaBuscarPorTitulo extends JFrame {
+public class VentanaPrestarLibro extends JFrame {
+
+    JButton btnBuscar = new JButton("Buscar");
+    JButton btnPrestar = new JButton("Prestar libro");
 
     JTextField tfBuscar = new JTextField();
-    JButton btnBuscar = new JButton("Buscar libro");
+    JTextField tfPrestar = new JTextField();
 
-    JLabel lbBUscar = new JLabel("Introduce el tiutlo o parte de este:");
-    JLabel lbTituloVen = new JLabel("Rellene el formulario para buscar un libro");
+    JLabel lbPrestar = new JLabel("Introduce el isbn del libro que quieres prestar");
+    JLabel lbEnunciado = new JLabel("Introduce el titulo o parte para ver los libros");
+    public VentanaPrestarLibro(){
 
-    public VentanaBuscarPorTitulo(){
-        super("Buscar libros");
+        super("Prestar libros");
         setSize(600,400);
         setLayout(null);
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        lbTituloVen.setBounds(60,20,350,30);
-        lbBUscar.setBounds(60,50,190,30);
 
-        tfBuscar.setBounds(60,80,100,30);
-
-        btnBuscar.setBounds(200,80,150,30);
-
+        lbEnunciado.setBounds(60,20,400,30);
+        tfBuscar.setBounds(60,60,80,30);
+        btnBuscar.setBounds(150,60,80,30);
+        lbPrestar.setBounds(60,300,400,30);
+        tfPrestar.setBounds(60,330,80,30);
+        btnPrestar.setBounds(170,330,200,30);
 
         btnBuscar.addActionListener(e ->{
             JTable tbResultado;
@@ -59,19 +60,31 @@ public class VentanaBuscarPorTitulo extends JFrame {
             JScrollPane jsp = new JScrollPane(tbResultado);
             tbResultado.setEnabled(false);
             add(jsp);
-
-
-            jsp.setBounds(60,120,480,230);
+            jsp.setBounds(60,100,480,200);
             repaint();
             btnBuscar.setEnabled(false);
         });
 
-
-        add(lbTituloVen);
-        add(lbBUscar);
+        add(lbEnunciado);
         add(tfBuscar);
         add(btnBuscar);
+        add(lbPrestar);
+        add(tfPrestar);
+        add(btnPrestar);
+
 
         setVisible(true);
+
+        btnPrestar.addActionListener(e ->{
+
+            DaoImpLibroBD.PrestaLibros(tfPrestar.getText());
+
+            JOptionPane.showMessageDialog(null,"El libro ha sido prestado correctamente");
+            btnPrestar.setEnabled(false);
+
+        });
     }
+
+
+
 }

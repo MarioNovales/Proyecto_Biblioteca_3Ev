@@ -4,33 +4,35 @@ import Aplicacion.Libro;
 import DAO.DaoImpLibroBD;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.util.ArrayList;
 
-public class VentanaBuscarPorTitulo extends JFrame {
+public class VentanaDevolverLibro extends JFrame{
+
+    JButton btnBuscar = new JButton("Buscar");
+    JButton btnDevolver = new JButton("Devolver librolibro");
 
     JTextField tfBuscar = new JTextField();
-    JButton btnBuscar = new JButton("Buscar libro");
+    JTextField tfDevolver = new JTextField();
 
-    JLabel lbBUscar = new JLabel("Introduce el tiutlo o parte de este:");
-    JLabel lbTituloVen = new JLabel("Rellene el formulario para buscar un libro");
+    JLabel lbDevolver = new JLabel("Introduce el isbn del libro que quieres devolver");
+    JLabel lbEnunciado = new JLabel("Introduce el titulo o parte para ver los libros");
 
-    public VentanaBuscarPorTitulo(){
-        super("Buscar libros");
+    public VentanaDevolverLibro(){
+
+        super("Devolver libros");
         setSize(600,400);
         setLayout(null);
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        lbTituloVen.setBounds(60,20,350,30);
-        lbBUscar.setBounds(60,50,190,30);
 
-        tfBuscar.setBounds(60,80,100,30);
-
-        btnBuscar.setBounds(200,80,150,30);
-
+        lbEnunciado.setBounds(60,20,400,30);
+        tfBuscar.setBounds(60,60,80,30);
+        btnBuscar.setBounds(150,60,80,30);
+        lbDevolver.setBounds(60,300,400,30);
+        tfDevolver.setBounds(60,330,80,30);
+        btnDevolver.setBounds(170,330,200,30);
 
         btnBuscar.addActionListener(e ->{
             JTable tbResultado;
@@ -61,17 +63,26 @@ public class VentanaBuscarPorTitulo extends JFrame {
             add(jsp);
 
 
-            jsp.setBounds(60,120,480,230);
+            jsp.setBounds(60,100,480,200);
             repaint();
             btnBuscar.setEnabled(false);
         });
 
-
-        add(lbTituloVen);
-        add(lbBUscar);
+        add(lbEnunciado);
         add(tfBuscar);
         add(btnBuscar);
+        add(lbDevolver);
+        add(tfDevolver);
+        add(btnDevolver);
+
 
         setVisible(true);
+
+        btnDevolver.addActionListener(e ->{
+
+            DaoImpLibroBD.DevolverLibro(tfDevolver.getText());
+
+            JOptionPane.showMessageDialog(null,"El libro ha sido devuelto correctamente");
+        });
     }
 }
