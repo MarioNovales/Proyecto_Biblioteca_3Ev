@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Biblioteca>
+    <Libro Prestado="false">
+        <isbn>1234</isbn>
+        <titulo>Primero</titulo>
+        <autor>Pedro</autor>
+        <paginas>1323</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>45653</isbn>
+        <titulo>Programacion</titulo>
+        <autor>Juan</autor>
+        <paginas>123</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>45654a</isbn>
+        <titulo>Probando</titulo>
+        <autor>Alguien</autor>
+        <paginas>678</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>4567</isbn>
+        <titulo>El quijote</titulo>
+        <autor>Cervantes</autor>
+        <paginas>1234</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9087</isbn>
+        <titulo>Invisible</titulo>
+        <autor>Miguel</autor>
+        <paginas>456</paginas>
+    </Libro>
+</Biblioteca>

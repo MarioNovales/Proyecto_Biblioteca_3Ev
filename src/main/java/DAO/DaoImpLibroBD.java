@@ -10,12 +10,9 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DaoImpLibroBD implements IDaoLibro {
+
     @Override
-    public void creaLibro(Libro l) {
-    }
-
-    public static void guradaLibro(String isbn,String titulo , String autor, int paginas){
-
+    public void creaLibro(String isbn, String titulo, String autor, int paginas) {
         boolean prestado = false;
 
         String consulta = "INSERT INTO libro VALUES ('" + isbn +"','" + titulo + "','" + autor + "'," + paginas + "," + prestado + ")";
@@ -135,6 +132,7 @@ public class DaoImpLibroBD implements IDaoLibro {
         }
 
 
+
     }
 
 
@@ -148,6 +146,39 @@ public class DaoImpLibroBD implements IDaoLibro {
 
             pstmnt.executeUpdate();
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public static ArrayList<Libro> muestraTodo(){
+        ArrayList<Libro> ArrayLibro = new ArrayList<>();
+
+        String tituloLb, autor,  isbn;
+        int paginas;
+        boolean prestado;
+
+
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+            PreparedStatement pstmnt = con.prepareStatement("SELECT * FROM libro");
+
+            ResultSet rs = pstmnt.executeQuery();
+
+
+
+            while (rs.next()){
+                isbn = rs.getString(1);
+                tituloLb = rs.getString(2);
+                autor = rs.getString(3);
+                paginas = rs.getInt(4);
+                prestado = rs.getBoolean(5);
+
+                ArrayLibro.add(new Libro(isbn,tituloLb,autor,paginas,prestado));
+            }
+
+            return  ArrayLibro;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

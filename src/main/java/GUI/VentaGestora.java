@@ -1,5 +1,7 @@
 package GUI;
 
+import XML.Escritura;
+
 import javax.swing.*;
 
 public class VentaGestora extends JFrame {
@@ -11,6 +13,7 @@ public class VentaGestora extends JFrame {
     JButton btnActualizar = new JButton("Actualizar libro");
     JButton btnPrestarLibro = new JButton("Prestar Libro");
     JButton btnDevolver = new JButton("Devolver Libro");
+    JButton btnXML = new JButton("Escribir xml");
 
     JLabel lbMenu = new JLabel("Menu:");
     public VentaGestora(){
@@ -31,6 +34,7 @@ public class VentaGestora extends JFrame {
         btnActualizar.setBounds(110,260,180,30);
         btnPrestarLibro.setBounds(110,300,180,30);
         btnDevolver.setBounds(110,340,180,30);
+        btnXML.setBounds(110,380,180,30);
 
         add(lbMenu);
         add(btnAñadir);
@@ -40,6 +44,7 @@ public class VentaGestora extends JFrame {
         add(btnActualizar);
         add(btnPrestarLibro);
         add(btnDevolver);
+        add(btnXML);
 
         setVisible(true);
 
@@ -84,6 +89,10 @@ public class VentaGestora extends JFrame {
             javax.swing.SwingUtilities.invokeLater(() ->{
                 new VentanaDevolverLibro();
             });
+        });
+
+        btnXML.addActionListener(e ->{
+            new Escritura().escrituraXml();
         });
     }
 }
