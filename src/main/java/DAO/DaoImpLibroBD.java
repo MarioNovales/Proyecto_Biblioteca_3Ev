@@ -104,8 +104,8 @@ public class DaoImpLibroBD implements IDaoLibro {
         ArrayList<Libro> ArrayLibro = new ArrayList<>();
 
         String tituloLb, autor,  isbn;
-        int paginas = 0;
-        boolean prestado = false;
+        int paginas;
+        boolean prestado;
 
 
         try {
