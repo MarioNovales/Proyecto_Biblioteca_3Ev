@@ -30,4 +30,100 @@
         <autor>Miguel</autor>
         <paginas>456</paginas>
     </Libro>
+    <Libro Prestado="true">
+        <isbn>9780062315007</isbn>
+        <titulo>Divergent</titulo>
+        <autor>Veronica Roth</autor>
+        <paginas>487</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9780062457714</isbn>
+        <titulo>The Subtle Art of Not Giving a F*ck</titulo>
+        <autor>Mark Manson</autor>
+        <paginas>224</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780064401887</isbn>
+        <titulo>Charlotte's Web</titulo>
+        <autor>E.B. White</autor>
+        <paginas>192</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9780140449266</isbn>
+        <titulo>The Iliad</titulo>
+        <autor>Homer</autor>
+        <paginas>683</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9780345391803</isbn>
+        <titulo>The Hitchhiker's Guide to the Galaxy</titulo>
+        <autor>Douglas Adams</autor>
+        <paginas>215</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780525427575</isbn>
+        <titulo>Quiet: The Power of Introverts in a World That Can't Stop Talking</titulo>
+        <autor>Susan Cain</autor>
+        <paginas>352</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9780525536229</isbn>
+        <titulo>Atomic Habits</titulo>
+        <autor>James Clear</autor>
+        <paginas>320</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780525539879</isbn>
+        <titulo>The Testaments</titulo>
+        <autor>Margaret Atwood</autor>
+        <paginas>432</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780544272996</isbn>
+        <titulo>The Hunger Games</titulo>
+        <autor>Suzanne Collins</autor>
+        <paginas>374</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780547928227</isbn>
+        <titulo>Harry Potter and the Philosopher's Stone</titulo>
+        <autor>J.K. Rowling</autor>
+        <paginas>223</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9780553103540</isbn>
+        <titulo>A Game of Thrones</titulo>
+        <autor>George R.R. Martin</autor>
+        <paginas>864</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780735211292</isbn>
+        <titulo>Sapiens: A Brief History of Humankind</titulo>
+        <autor>Yuval Noah Harari</autor>
+        <paginas>464</paginas>
+    </Libro>
+    <Libro Prestado="true">
+        <isbn>9780735220140</isbn>
+        <titulo>The Dutch House</titulo>
+        <autor>Ann Patchett</autor>
+        <paginas>352</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9780802130208</isbn>
+        <titulo>The Catcher in the Rye</titulo>
+        <autor>J.D. Salinger</autor>
+        <paginas>277</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9781591845527</isbn>
+        <titulo>The Lean Startup</titulo>
+        <autor>Eric Ries</autor>
+        <paginas>336</paginas>
+    </Libro>
+    <Libro Prestado="false">
+        <isbn>9781984822175</isbn>
+        <titulo>Becoming</titulo>
+        <autor>Michelle Obama</autor>
+        <paginas>426</paginas>
+    </Libro>
 </Biblioteca>
