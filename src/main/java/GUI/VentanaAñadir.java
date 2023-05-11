@@ -58,7 +58,7 @@ public class VentanaAñadir extends JFrame {
         btnAñadir.addActionListener(e ->{
 
              new DaoImpLibroBD().creaLibro(tfIsbn.getText(),tfTitulo.getText(),tfAutor.getText(), Integer.parseInt(tfPaginas.getText()));
-            JOptionPane.showMessageDialog(null,"Se ha guardado correctamente");
+             JOptionPane.showMessageDialog(null,"Se ha guardado correctamente em la base de datos");
 
         });
     }
