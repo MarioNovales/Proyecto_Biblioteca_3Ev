@@ -184,4 +184,22 @@ public class DaoImpLibroBD implements IDaoLibro {
         }
     }
 
+
+    public static void subeDatos(ArrayList<Libro> libros){
+
+        try {
+            Connection con = ConectionManager.getConexion("biblioteca");
+
+
+            for (Libro lb : libros){
+                String consulta = "INSERT INTO libro VALUES ('" + lb.getIsbn() +"','" + lb.getTitulo() + "','" + lb.getAutor() + "'," + lb.getPaginas() + "," + lb.isPrestado() + ")";
+                PreparedStatement pstmnt = con.prepareStatement(consulta);
+                pstmnt.executeUpdate(consulta);
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
