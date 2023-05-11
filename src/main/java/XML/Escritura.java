@@ -6,6 +6,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
+import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -59,6 +60,7 @@ public class Escritura {
                 transformer.transform(new DOMSource(documento),new StreamResult("src/main/resources/biblioteca.xml"));
             }
 
+            JOptionPane.showMessageDialog(null,"Los datos han sido guardados con exito");
 
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
