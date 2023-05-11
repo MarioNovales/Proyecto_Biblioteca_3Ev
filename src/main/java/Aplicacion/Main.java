@@ -1,6 +1,7 @@
 package Aplicacion;
 
 import DAO.ConectionManager;
+import DAO.DaoImpLibroBD;
 import GUI.VentaGestora;
 
 public class Main {

@@ -202,4 +202,23 @@ public class DaoImpLibroBD implements IDaoLibro {
             throw new RuntimeException(e);
         }
     }
+
+
+    public static void  validaDatos(ArrayList<Libro> listaLibros){
+
+
+        for (Libro lb : listaLibros){
+            if (!lb.getTitulo().matches("'")){
+                    lb.setTitulo(lb.getTitulo().replaceAll("'","'\'"));
+            }
+
+            if (!lb.getAutor().matches("'")){
+                lb.setAutor(lb.getAutor().replaceAll("'","\'"));
+            }
+
+        }
+
+        subeDatos(listaLibros);
+
+    }
 }

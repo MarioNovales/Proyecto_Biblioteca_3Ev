@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b1c9d539-1a18-48d3-8970-cd9fe6e798f3" name="Changes" comment="Empezadas las ventanas y terminado conexion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentaGestora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentaGestora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/XML/Lectura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XML/Lectura.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683732527333</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Empezadas las ventanas y terminado conexion">
+      <created>1683795472094</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683795472094</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +204,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/GUI/VentanaActualizar.java</url>
           <line>71</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java</url>
+          <line>211</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java</url>
+          <line>209</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java</url>
+          <line>214</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/DaoImpLibroBD.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

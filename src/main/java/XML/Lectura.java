@@ -47,7 +47,7 @@ public class Lectura {
 
             }
 
-            DaoImpLibroBD.subeDatos(listaLibros);
+            DaoImpLibroBD.validaDatos(listaLibros);
 
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
